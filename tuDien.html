@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Tu dien don gian</h3>
+<input type="text" id="input">
+<input type="button" value="Check" onclick="check()">
+<script>
+    eng = ['red', 'white', 'green', 'grey'];
+    viet = ['Do', 'Trang', 'Xanh', 'Xam'];
+
+    function check() {
+        var kiemtra = false;
+        var str = document.getElementById('input').value;
+        for (var i = 0; i < eng.length; i++) {
+            if (eng[i] === str) {
+                kiemtra = true;
+                var result = viet[i];
+            }
+        }
+        if (kiemtra === true){
+            document.write(result)
+            } else {
+            document.write("Khong co trong tu dien");
+        }
+
+    }
+</script>
+</body>
+</html>
